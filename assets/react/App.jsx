@@ -1,7 +1,10 @@
 export const App = () => {
     return (
         <>
-            <div>Test</div>
+            <div className="flex flex-col justify-center items-center">
+                <div className={"bg-blue-600 w-fit"}>Test</div>
+                <div>LALALALA</div>
+            </div>
         </>
     )
 }

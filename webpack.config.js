@@ -17,10 +17,10 @@ Encore
     /*
      * ENTRY CONFIG
      *
-     * Each entry will result in one JavaScript file (e.g. app.js)
+     * Each entry will result in one JavaScript file (e.g. app.jsx)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/app.js')
+    .addEntry('app', './assets/app.jsx')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -74,6 +74,18 @@ Encore
 
     // uncomment to enable PostCSSLoader
     .enablePostCssLoader()
+
+    .configureDevServerOptions(options => {
+        options.hot = true;
+        options.liveReload = true;
+        options.server = {
+            type: 'https',
+            // You can optionally provide your own certificate paths here
+            // key: '/path/to/key.pem',
+            // cert: '/path/to/cert.pem',
+        };
+    })
 ;
 
+console.log("webpack loaded");
 module.exports = Encore.getWebpackConfig();
