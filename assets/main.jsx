@@ -7,12 +7,13 @@ import './bootstrap.js';
  */
 import './styles/app.css';
 
-console.log('This log comes from assets/app.jsx - welcome to AssetMapper! 🎉');
+console.log('This log comes from assets/main.jsx - welcome to AssetMapper! 🎉');
 
 
 import { createRoot } from 'react-dom/client';
 import {StrictMode} from "react";
 import {App} from './react/App.jsx';
+import {Homepage} from "./react/Homepage";
 
 const container = document.getElementById('react-root');
 
@@ -24,3 +25,4 @@ if (container) {
         </StrictMode>
     );
 }
+
