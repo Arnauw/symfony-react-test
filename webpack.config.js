@@ -79,7 +79,7 @@ Encore
         options.hot = true;
         options.liveReload = true;
         options.server = {
-            type: 'https',
+            // type: 'https',
             // You can optionally provide your own certificate paths here
             // key: '/path/to/key.pem',
             // cert: '/path/to/cert.pem',

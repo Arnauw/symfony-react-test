@@ -22,10 +22,10 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev-server": "encore dev-server",
+        "serve": "symfony serve -no-tls",
+        "dev-server": "encore dev-server --hot --host 127.0.0.1",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "wat": "encore dev-server --hot --host 127.0.0.1",
         "build": "encore production --progress"
     }
 }
